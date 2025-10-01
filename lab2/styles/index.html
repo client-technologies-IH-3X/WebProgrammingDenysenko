@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Fetch Lab</title>
+</head>
+<body>
+    <button id="fetchBtn">Отримати дані</button>
+    <script>
+       const fetchBtn = document.getElementById('fetchBtn');
+              fetchBtn.addEventListener('click', () => {
+                fetch('https://httpbin.org/status/500')
+                .then(response => {
+                    console.log('Код відповіді:', response.status);
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Отримані дані:', data);
+                })
+                .catch(error => {
+                    console.error('Помилка запиту:', error);
+                }); 
+            }); 
+    </script>
+</body>
+</html>
