@@ -1,0 +1,109 @@
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Noto Sans', Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+  margin: 0;
+  padding: 0;
+  background: #f7f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+.site-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(90deg, #4800ff, #00c6ff);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0,0.5);
+  font-size: 20px;
+}
+
+.site-header img {
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navigation {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navigation a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0077ff;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.navigation li:hover, .navigation a:hover {
+  transform: scale(1.3);
+  color: #ff6600;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about, .hobbie, .facts {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hobbie figure {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.hobbie img {
+  max-width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.facts h3 {
+  margin-top: 0;
+  color: #0077ff;
+}
+
+.facts ul {
+  padding-left: 50px;
+}
+
+.facts a {
+  color: #ff6600;
+  text-decoration: none;
+  transition: text-shadow 0.2s;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: #ddd;
+  margin-top: 20px;
+}
+
+.site-footer a {
+  color: #0077ff;
+  text-decoration: none;
+}

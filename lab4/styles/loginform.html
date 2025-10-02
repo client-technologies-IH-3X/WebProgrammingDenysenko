@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизація</title>
+    <meta name="description" content="Лабораторна робота 4" />
+    <link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body>
+    <header class="authheader">
+        <h1>Авторизація</h1>
+        <nav><a href="index.html">Головна</a></nav>
+    </header>
+    <main class="authcontent">
+        <form id="loginForm">
+            <p>
+            <label>
+                Логін: <input type="text" id="username" name="username" required>
+            </label>
+            </p>
+            <p>
+            <label>
+                Пароль: <input type="password" id="password" name="password" required>
+            </label>
+            </p>
+            <p>
+                <label><input type="checkbox" name="remember">Запам’ятати мене</label>
+            </p>
+            <p>
+                <button type="submit">Увійти</button>
+                <button type="reset">Очистити</button>
+            </p>
+        </form>
+        <p id="result"></p>
+    </main>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const user = document.getElementById('username').value;
+        document.getElementById('loginResult').innerText = `Вітаємо з поверненням,
+        ${user}!`;
+        });
+    </script>
+</body>
+</html>
