@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Реєстрація</title>
+    <meta name="description" content="Лабораторна робота 4" />
+    <link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body class="authregbody">
+    <header class="authregheader">
+        <h1>Реєстрація</h1>
+        <nav class="home_button"><ul><li><a href="index.html">ГОЛОВНА</a></li></ul></nav>
+    </header>
+    <main class="authregcontent">
+        <div>
+            <form id="regForm" class="regForm">
+                <p>
+                    <label>
+                        ПІБ: <input type="text" id="fullname" name="fullname" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Пошта: <input type="email" id="email" name="email" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Пароль: <input type="password" id="regpassword" name="regpassword" required>
+                    </label>
+                </p>
+                <p>
+                    Група:
+                    <label><input type="radio" name="group" value="IN31"> ІН-31</label>
+                    <label><input type="radio" name="group" value="IN32"> ІН-32</label>
+                    <label><input type="radio" name="group" value="IN33"> ІН-33</label>
+                </p>
+                <p>
+                    <label>
+                        Дата народження: <input type="date" name="birthdate">
+                    </label>
+                </p>
+                <p>
+                    <label>Колір аватара:
+                        <select name="avatarcolour">
+                            <option value="avatarred">Червоний</option>
+                            <option value="avataryellow">Жовтий</option>
+                            <option value="avatargreen">Зелений</option>
+                            <option value="avatarblue">Синій</option>
+                            <option value="avatarpink">Рожевий</option>
+                            <option value="avatarorange">Помаранчевий</option>
+                        </select>
+                    </label>
+                </p>
+                <p class="textareabio">
+                    <label>
+                        Про себе: 
+                    </label>
+                    <textarea name="bio" rows="4" cols="40"></textarea>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="newsletter"> Анонімний профіль
+                    </label>
+                </p>
+                <p class="action_buttons">
+                    <button type="submit" class="greenbutton">Зареєструватися</button>
+                    <button type="reset" class="redbutton">Очистити</button>
+                </p>
+            </form>
+        </div>
+        <p id="regResult"></p>
+    </main>
+    <script>
+        document.getElementById('regForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('fullname').value;
+        document.getElementById('regResult').innerText = `Дякуємо за реєстрацію, ${name}!`;
+        });
+    </script>
+</body>
+</html>
