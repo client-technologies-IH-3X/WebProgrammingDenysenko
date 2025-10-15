@@ -1,0 +1,427 @@
+html {
+  font-size: clamp(13px, 1.1vw, 17px);
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Noto Sans', Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+  margin: 0;
+  padding: 0;
+  background: #f7f9fc;
+  color: #333;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: clamp(1.3rem, 3.5vw, 2.5rem);
+}
+h2 {
+  font-size: clamp(1rem, 2.5vw, 1.7rem);
+}
+h3 {
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+}
+
+.site-header {
+  text-align: center;
+  padding: 2.3rem 0.8rem;
+  background: linear-gradient(90deg, #4800ff, #00c6ff);
+  color: white;
+  box-shadow: 0 0.08rem 0.3rem rgba(0, 0, 0,0.5);
+  font-size: 1rem;
+}
+
+.site-header img {
+  border-radius: 50%;
+  border: 0.15rem solid white;
+  box-shadow: 0 0.06rem 0.2rem rgba(0, 0, 0, 0.5);
+  width: min(35vw, 11rem);
+  height: auto;
+}
+
+.navigation {
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 0.08rem 0.25rem rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.navigation a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #0077ff;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navigation li:hover, .navigation a:hover {
+  transform: scale(1.1);
+  color: #ff6600;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 70rem;
+  margin: auto;
+}
+
+.about, .hobbie, .facts {
+  background: white;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.06rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+.hobbie figure {
+  margin: 0.7rem 0;
+  text-align: center;
+}
+
+.hobbie img {
+  width: 35%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.4rem;
+  display: block;
+  margin-inline: auto;
+}
+
+.facts h3 {
+  margin-top: 0;
+}
+
+.facts ul {
+  padding-left: 1.5rem;
+}
+
+.facts a {
+  color: #0077ff;
+  text-decoration: none;
+  transition: text-shadow 0.2s;
+}
+
+.facts a:hover {
+  color: #ff6600;
+  text-decoration: none;
+  transition: text-shadow 0.2s;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 0.7rem;
+  background: #222;
+  color: #ddd;
+  margin-top: 1rem;
+  font-size: clamp(0.8rem, 1.3vw, 1rem);
+}
+
+.site-footer a {
+  color: #0077ff;
+  text-decoration: none;
+}
+
+@media (min-width: 600px) {
+  main {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "about facts"
+      "hobbie facts";
+  }
+
+  .about { grid-area: about; }
+  .hobbie { grid-area: hobbie; }
+  .facts { grid-area: facts; }
+
+  .navigation ul {
+    gap: 2rem;
+  }
+
+  .site-header {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: clamp(15px, 1vw, 18px);
+  }
+
+  main {
+    grid-template-columns: 3fr 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .site-header {
+    padding: 4rem 2rem;
+  }
+
+  .navigation a {
+    font-size: clamp(0.9rem, 1.3vw, 1rem);
+  }
+
+  .site-footer {
+    padding: 1.5rem;
+  }
+}
+
+
+.authregbody {
+  background: #010101;
+}
+
+.authregheader {
+  margin-top: 0.8rem;
+  text-align: center;
+  color: white;
+  font-size: 12pt;
+}
+
+.authregcontent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+  gap: 0px;
+  font-size: 1rem;
+  box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.5);
+  background: #151515;
+  color: #ddd;
+  min-width: min(85%, 400px);
+  margin-bottom: 4rem;
+}
+
+.loginForm p, .regForm p{
+  display: flex;
+  justify-content: center;
+}
+
+.loginForm label, .regForm label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.authregbody button {
+  background: #6F6F6F;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  border: #6F6F6F solid 0.15rem;
+}
+
+.greenbutton:hover {
+  border: #35AF48 solid 0.15rem;
+  background: #35AF48;
+  box-shadow: 0 0 0.5rem #35AF48;
+}
+
+.redbutton:hover {
+  border: #FE3E0D solid 0.15rem;
+  background: #FE3E0D;
+  box-shadow: 0 0 0.5rem #FE3E0D;
+}
+
+.authregbody input[type="checkbox"] {
+  accent-color: #0077ff;
+  margin-right: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.authregbody input[type="checkbox"]:checked {
+    box-shadow: 0 0 0.4rem #0077ff;
+} 
+
+input[type="text"], input[type="password"], input[type="email"], input[type="radio"], input[type="date"], select, textarea {
+  width: 45%;
+  padding: 0.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 0.3rem;
+  background-color: #333;
+  color: #fff;
+  font-size: 12pt;
+  border: #6F6F6F solid 0.15rem;
+}
+
+.textareabio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+textarea {
+  width: 75%;
+}
+
+.authregbody select {
+  width: auto;
+  font-size: 11pt;
+  margin-top: 0.05rem;
+}
+
+.authregbody input[type="date"] {
+  width: auto;
+  font-size: 11pt;
+  margin-top: 0.05rem;
+}
+
+.authregbody input[type="text"] {
+  width: 52%;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+  outline: none;
+  border: #0077ff solid 0.15rem;
+  box-shadow: 0 0 0.4rem #0077ff;
+  background-color: #2d2d2d;
+}
+
+.authregbody input[type="radio"] {
+  appearance: none;
+  width: auto;
+  padding: 0;
+  margin-top: 0.4rem;
+  border-radius: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  outline: none;
+  border: 0.08rem solid #999;
+  border-radius: 50%;
+}
+
+.authregbody input[type="radio"]:checked {
+  border: 0;
+  border: #0077ff solid 0.15rem;
+  background: #0077ff;
+  box-shadow: 0 0 0.5rem #0077ff;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+}
+
+.action_buttons {
+  gap: 1rem;
+}
+
+.authorization, .home_button {
+  position: absolute;
+  top: 0.08rem;
+  right: 0.08rem;
+  z-index: 100;
+}
+.authorization a, .home_button a{
+  text-decoration: none;
+  font-weight: 600;
+  color: #0077ff;
+  font-size: 18pt;
+  padding: 0.4rem 0.8rem;
+}
+
+.home_button a {
+  color: #fff;
+  font-size: 16pt;
+}
+
+.authorization ul, .home_button ul {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+}
+.authorization li, .home_button li {
+  border-radius: 1rem;
+  color: #0077ff;
+  background-color: #fff;
+  margin-right: 1rem;
+  padding: 0.3rem;
+}
+
+.home_button li {
+  background-color: #6F6F6F;
+  border: #6F6F6F solid 0.15rem;
+}
+
+.authorization li:hover, .home_button li:hover {
+  border-radius: 0.6rem;
+  background: #0077ff;
+  box-shadow: 0 0 0.5rem #0077ff;
+}
+
+.authorization a:hover {
+  color: #fff;
+}
+
+.home_button li:hover {
+  border: #0077ff solid 0.15rem;
+}
+
+@media (max-width: 480px) {
+  .authregcontent {
+    width: 85%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .authorization a, .home_button a {
+    font-size: 10pt;
+  }
+  .authregheader h1 {
+    font-size: 1.5rem;
+    margin-top: 5rem;
+  }
+
+  input, select, textarea {
+    font-size: 0.9rem;
+  }
+
+  .authregbody button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .action_buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 768px) {
+  .authregcontent {
+    width: 75%;
+  }
+
+  input, select, textarea {
+    font-size: 2.5rem;
+  }
+
+  .authregbody button {
+    padding: 0.5rem 1.2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .authregcontent {
+    width: 24rem;
+  }
+}
