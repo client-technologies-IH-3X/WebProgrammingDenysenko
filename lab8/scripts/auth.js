@@ -87,7 +87,7 @@ function showWelcome(user) {
           <div class="welcomediv">
               <div><h2>Вітаємо, ${user.fullname}!</h2></div>
               <div>
-                <button href="index.html" class="greenbutton">Головна</button>
+                <a href="index.html"><button class="greenbutton">Головна</button></a>
                 <button id="logoutBtn" class="redbutton">Вийти</button>
               </div>
           </div>
