@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизація</title>
+    <meta name="description" content="Лабораторна робота 4" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="authregbody">
+    <header class="authregheader">
+        <h1>Авторизація</h1>
+        <nav class="home_button"><ul><li><a href="index.html">🏠</a></li></ul></nav>
+    </header>
+    <main class="authregcontent">
+        <div>
+            <form id="loginForm" class="loginForm">
+                <p>
+                    <label>
+                        Логін: <input type="text" id="username" name="username" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Пароль: <input type="password" id="password" name="password" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="remember">Запам’ятати мене
+                    </label>
+                </p>
+                <p class="action_buttons">
+                    <button type="submit" class="greenbutton">Увійти</button>
+                    <button type="reset" class="redbutton">Очистити</button>
+                </p>
+            </form>
+        </div>        
+        <p id="loginResult"></p>
+    </main>
+    <script src="../scripts/auth.js"></script>
+</body>
+</html>
