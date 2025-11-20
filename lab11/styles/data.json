@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Денисенко Денис",
+    "email": "denysenko.denys@student.sumdu.edu.ua",
+    "messages": [
+      "Привіт",
+      "Це мій новий чат і тут можна спілкуватися"
+    ]
+  },
+  {
+    "name": "Гострий Максим",
+    "email": "hostryi.maksym@student.sumdu.edu.ua",
+    "messages": [
+      "Привіт",
+      "Дуже круто"
+    ]
+  },
+  {
+    "name": "Олег Малиновий",
+    "email": "malynovyi.oleg@student.sumdu.edu.ua",
+    "messages": [
+      "Доброго ранку, цікаво навіщо на цьому сайті чат?"
+    ]
+  },
+  {
+    "name": "Денисенко Денис",
+    "email": "denysenko.denys@student.sumdu.edu.ua",
+    "messages": [
+      "Доброго, просто для тесту"
+    ]
+  }
+]
