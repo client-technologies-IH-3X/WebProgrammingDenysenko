@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk" data-owner="Денисенко Денис">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab3 — Адаптивне меню (TypeScript)</title>
+  <meta name="description" content="Лабораторна робота 3 — адаптивне меню" />
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body>
+  <header id="header" class="site-header">
+    <h1>🍕 Денисенко Денис — ІН-31</h1>
+    <p class="subtitle">Моя власна сторінка</p>
+    <button id="menuButton" class="menu-button" aria-label="Перемикач навігаційного меню" aria-expanded="false" aria-controls="sidebar"> ☰ </button>
+  </header>
+  <nav id="sidebar" class="navigation" aria-label="Головне меню">
+    <ul>
+      <li><a href="#about">Про мене</a></li>
+      <li><a href="#hobbie">Хобі</a></li>
+      <li><a href="#facts">Цікаві факти</a></li>
+      <li><a href="#contacts">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <main class="page-content">
+    <section id="about">
+      <h2>Про мене</h2>
+      <p> Мене звати Денис. Я навчаюся на 3 курсі за програмою інформатика в групі ІН-31, цікавлюся комп'ютерними технологіями та усім що з цим пов'язане. </p>
+    </section>
+  </main>
+
+  <footer id="contacts" class="site-footer">
+    <h2>Контакти</h2>
+    <p>Email: <a href="#contacts">denysenko.denys@student.sumdu.edu.ua</a></p>
+    <p>&copy; 2025 Денисенко Денис</p>
+  </footer>
+
+  <script src="../scripts/main.js" type="module"></script>
+</body>
+</html>
